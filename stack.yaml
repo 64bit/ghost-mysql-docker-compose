@@ -9,7 +9,7 @@ services:
       - 80:2368
     volumes:
       - type: bind
-        source: ./ghostdata
+        source: ${GHOST_DATA} 
         target: /var/lib/ghost/content
     environment:
       - url=${URL}
@@ -22,7 +22,7 @@ services:
     image: mysql/mysql-server:5.7.21
     volumes:
       - type: bind
-        source: ./mysqldata
+        source: ${MYSQL_DATA}
         target: /var/lib/mysql
     env_file:
       - .env
