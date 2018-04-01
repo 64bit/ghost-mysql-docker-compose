@@ -6,12 +6,13 @@ services:
     image: ghost:1.22.0-alpine
     restart: always
     ports:
-      - 8080:2368
+      - 80:2368
     volumes:
       - type: bind
         source: ./ghostdata
         target: /var/lib/ghost/content
     environment:
+      - url=${URL}
       - database__client=mysql
       - database__connection__host=mysqldb
       - database__connection__user=${MYSQL_USER}
