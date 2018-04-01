@@ -1,0 +1,27 @@
+version: "3.6"
+services:
+  ghostapp:
+    depends_on: 
+      - mysqldb
+    image: ghost:1.22.0-alpine
+    restart: always
+    ports:
+      - 8080:2368
+    volumes:
+      - type: bind
+        source: ./ghostdata
+        target: /var/lib/ghost/content
+    environment:
+      - database__client=mysql
+      - database__connection__host=mysqldb
+      - database__connection__user=${MYSQL_USER}
+      - database__connection__password=${MYSQL_PASSWORD}
+      - database__connection__database=${MYSQL_DATABASE}
+  mysqldb:
+    image: mysql/mysql-server:5.7.21
+    volumes:
+      - type: bind
+        source: ./mysqldata
+        target: /var/lib/mysql
+    env_file:
+      - .env
