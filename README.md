@@ -12,4 +12,4 @@ Mysql user, password, db is read from `.env` file. Container data is persisted a
 
 1. Configure: `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE` in `.env` file to be used by Ghost. 
 2. Start: `docker-compose -f stack.yaml up`
-3. Go to: (http://localhost:8080)[http://localhost:8080]
+3. Go to: [http://localhost:8080](http://localhost:8080)
