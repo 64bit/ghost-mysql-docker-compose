@@ -20,6 +20,7 @@ services:
       - database__connection__database=${MYSQL_DATABASE}
   mysqldb:
     image: mysql/mysql-server:5.7.21
+    restart: always
     volumes:
       - type: bind
         source: ${MYSQL_DATA}
