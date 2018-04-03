@@ -1,6 +1,7 @@
 version: "3.6"
 services:
   ghostapp:
+    container_name: ghost_container
     depends_on: 
       - mysqldb
     image: ghost:1.22.0-alpine
@@ -19,6 +20,7 @@ services:
       - database__connection__password=${MYSQL_PASSWORD}
       - database__connection__database=${MYSQL_DATABASE}
   mysqldb:
+    container_name: mysql_container
     image: mysql/mysql-server:5.7.21
     restart: always
     volumes:
@@ -28,6 +30,7 @@ services:
     env_file:
       - .env
   nginx:
+    container_name: nginx_container
     image: nginx:1.12.2
     restart: always
     depends_on:
