@@ -27,3 +27,21 @@ services:
         target: /var/lib/mysql
     env_file:
       - .env
+  nginx:
+    image: nginx:1.12.2
+    restart: always
+    depends_on:
+      - ghostapp
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - type: bind
+        source: ${NGINX_CONFD_DIR}
+        target: /etc/nginx/conf.d
+      - type: bind
+        source: ${NGINX_CONF_FILE}
+        target: /etc/nginx/nginx.conf
+      - type: bind
+        source: ${NGINX_VAR_LOG_DIR}
+        target: /var/log/nginx
