@@ -39,9 +39,16 @@ services:
       - type: bind
         source: ${NGINX_CONFD_DIR}
         target: /etc/nginx/conf.d
+        read_only: true
       - type: bind
         source: ${NGINX_CONF_FILE}
         target: /etc/nginx/nginx.conf
       - type: bind
         source: ${NGINX_VAR_LOG_DIR}
         target: /var/log/nginx
+      - type: bind
+        source: ${LETSENCRYPT_ETC_DIR}
+        target: /etc/letsencrypt
+      - type: bind
+        source: ${LETSENCRYPT_VAR_LIB_DIR}
+        target: /var/lib/letsencrypt
