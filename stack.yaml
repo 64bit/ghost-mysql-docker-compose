@@ -55,3 +55,6 @@ services:
       - type: bind
         source: ${LETSENCRYPT_VAR_LIB_DIR}
         target: /var/lib/letsencrypt
+      - type: bind
+        source: ${NGINX_WWW_DIR}
+        target: /var/www/html
