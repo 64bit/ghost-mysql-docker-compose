@@ -27,6 +27,9 @@ services:
       - type: bind
         source: ${MYSQL_DATA}
         target: /var/lib/mysql
+      - type: bind
+        source: ${MYSQL_BACKUP_DIR}
+        target: /var/lib/blog/backups
     env_file:
       - .env
   nginx:
