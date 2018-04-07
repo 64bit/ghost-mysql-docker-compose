@@ -4,7 +4,7 @@ services:
     container_name: ghost_container
     depends_on: 
       - mysqldb
-    image: ghost:1.22.0-alpine
+    image: ghost:1.22.1-alpine
     restart: always
     ports:
       - ${GHOST_PORT}:2368
