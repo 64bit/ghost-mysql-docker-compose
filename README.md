@@ -3,13 +3,14 @@ Production ready solution to start Ghost along with Mysql using docker compose i
 
 
 ## Intro
-
-Mysql user, password, db is read from `.env` file. Container data is persisted as follows:
-- `./ghostdata` is mounted at `/var/lib/ghost/content` in container
-- `./mysqldata` is mounted at `/var/lib/mysql` in container 
+All configurations are defined in .env file. Configurations like 
+- Mysql user, password, db
+- persistent storage for nginx, mysql & ghost containers.
 
 ## Usage
+1. Start: `docker-compose -f stack.yaml up -d`
+2. Go to: [http://localhost](http://localhost)
 
-1. Configure: `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE` in `.env` file to be used by Ghost. 
-2. Start: `docker-compose -f stack.yaml up`
-3. Go to: [http://localhost:8080](http://localhost:8080)
+To see how the final `stack.yaml` would look like after variable substitutions: 
+`docker-compose -f stack.yaml config`
+
