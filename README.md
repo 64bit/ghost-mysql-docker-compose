@@ -1,5 +1,5 @@
 # ghost-mysql-docker-compose
-Production ready solution to start Ghost along with Mysql using docker compose in single command. 
+Production ready solution to start Ghost along with Mysql & Nginx using docker compose.
 
 For setting up on production follow [README.md](https://github.com/64bit/ghost-mysql-docker-compose/blob/production/README.md) on `production` branch.
 
