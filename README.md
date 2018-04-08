@@ -28,7 +28,7 @@ Checklist for all parameters to be set for your Ghost installation in production
  
 * Commit your changes to `production` branch, push changes to `<your-repo>`.
 
-* To see how the final stack.yaml would look like after variable substitutions: docker-compose -f stack.yaml config
+* To see how the final stack.yaml would look like after variable substitutions: `docker-compose -f stack.yaml config`
   
 ## Step 2 Installation & Running:  
 
