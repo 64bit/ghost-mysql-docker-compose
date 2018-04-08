@@ -26,7 +26,7 @@ Checklist for all parameters to be set for your Ghost installation in production
     `DOMAINS=yourdomain.com,www.yourdomain.com`
   - Change EMAIL
  
-* Commit your changes to `production` branch, push changes to <your-repo>.
+* Commit your changes to `production` branch, push changes to `<your-repo>`.
 
 * To see how the final stack.yaml would look like after variable substitutions: docker-compose -f stack.yaml config
   
