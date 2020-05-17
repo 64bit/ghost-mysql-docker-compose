@@ -2,7 +2,7 @@
 
 # RUN THIS AFTER docker-compose, so that nginx container is up
 
-DOMAINS=gigapotential.com,www.gigapotential.com
+DOMAINS=gigapotential.com,www.gigapotential.com,gigapotential.dev,www.gigapotential.dev
 EMAIL=himanshun.iitkgp@gmail.com
 
 docker exec  nginx_container /bin/bash -c "mkdir -p /etc/apt/sources.list.d/ && touch /etc/apt/sources.list.d/backports.list"
