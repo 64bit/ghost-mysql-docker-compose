@@ -54,6 +54,8 @@ If everything came up fine, at this point http://yourdomain.com/.well-known shou
 To be able to access Ghost we need to install certificate next. 
 * run `scripts/certbot.sh` : at the end it should succesfully install certificate and modify `ghost.conf` in nginx container. 
 
+To update certficate (with new domain - or any reason) update, `ghost.conf` and `DOMAINS` in `scripts/certbot.sh` and rerun the script.
+
 ## Step 4: Fun Begins:
 * access `https://yourdomain.com/ghost` and create Ghost account. 
 * Write amazing blogs! 
